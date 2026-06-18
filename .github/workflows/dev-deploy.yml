@@ -43,20 +43,18 @@ jobs:
           const message = `Glue Pipeline Dev Deployment: ${status.toUpperCase()}`
           console.log(message)
     
-    - name: Create deployment record
-      uses: actions/create-release@v1
+    - name: Create GitHub Release
       if: success()
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v2
       with:
         tag_name: dev-deployed-${{ github.run_number }}
-        release_name: Dev Deployment ${{ github.run_number }}
+        name: Dev Deployment ${{ github.run_number }}
         body: |
-          Glue pipeline deployed to development
-          Commit: ${{ github.sha }}
-          Job: ${{ github.run_id }}
-        draft: false
-        prerelease: false
+         Glue pipeline deployed to development
+         Commit: ${{ github.sha }}
+         Job: ${{ github.run_id }}
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   terraform:
     needs: deploy
