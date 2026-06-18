@@ -4,7 +4,7 @@
 # 
 # Settings > Secrets and variables > Actions > New repository secret
 #
-# Required secrets:
+# Required secrets::
 # - AWS_ACCESS_KEY_ID: AWS access key for deployment
 # - AWS_SECRET_ACCESS_KEY: AWS secret access key
 # - AWS_REGION: AWS region (e.g., us-east-1)
