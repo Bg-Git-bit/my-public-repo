@@ -59,6 +59,7 @@ jobs:
         prerelease: false
 
   terraform:
+    needs: deploy
     runs-on: ubuntu-latest
     environment:
       name: aws-development

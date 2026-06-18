@@ -56,11 +56,3 @@ resource "aws_glue_job" "data_transformation" {
   
   depends_on = [aws_s3_object.glue_script]
 }
-
-# CloudWatch Log Group for Glue
-resource "aws_cloudwatch_log_group" "glue_logs" {
-  name              = "/aws-glue/${var.project_name}-${var.environment}"
-  retention_in_days = 30
-  
-  tags = var.tags
-}
