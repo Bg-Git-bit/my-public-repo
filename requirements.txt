@@ -1,5 +1,4 @@
-aws-glue-libs>=4.0.0
-pyspark==3.4.1
+awsglue
 boto3>=1.28.0
 pyyaml>=6.0
 python-dateutil>=2.8.2
