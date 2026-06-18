@@ -9,7 +9,7 @@ variable "environment" {
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "aws_glue_Script_1.py"
+  default     = "aws_glue_Script_1"
 }
 
 variable "aws_region" {
