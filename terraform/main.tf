@@ -25,7 +25,7 @@ resource "aws_s3_object" "glue_script" {
 # AWS Glue Job
 resource "aws_glue_job" "data_transformation" {
   name              = "${var.project_name}-${var.environment}"
-  role_arn          = var.glue_service_role_arn
+  role_arn          = var.glue_role_arn
   glue_version      = var.glue_version
   worker_type       = var.worker_type
   number_of_workers = var.number_of_workers
