@@ -54,7 +54,7 @@ jobs:
          Commit: ${{ github.sha }}
          Job: ${{ github.run_id }}
     env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.MY_GH_TOKEN }}
 
   terraform:
     needs: deploy
