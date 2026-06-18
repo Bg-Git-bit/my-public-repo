@@ -72,7 +72,7 @@ variable "s3_output_bucket" {
   type        = string
 }
 
-variable "glue_job_arn" {
+variable "glue_role_arn" {
   description = "IAM role ARN for Glue service"
   type        = string
 }
